@@ -3,4 +3,4 @@ project(LearningPlus)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(LearningPlus main.cpp)
+add_executable(LearningPlus main.cpp prime.cpp prime.h lcmGcd.cpp lcmGcd.h)
