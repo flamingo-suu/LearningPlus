@@ -1,11 +1,16 @@
-#include "iostream"
 #include "prime.h"
 #include "lcmGcd.h"
+#include "modulo.h"
+#include "fibonaci.h"
 using namespace std;
 
 int main() {
-    cout << lcm(14,8) << endl;
-    cout << gcd(14,8) << endl;
-    cout << gcdArray(3);
+    Prime prime;
+//    prime.prime18();
+//    Modulo modulo;
+//    modulo.modulo3();
+
+    Fibonaci fibonaci;
+    fibonaci.fibonaci2();
     return 0;
 }

@@ -4,7 +4,7 @@
 
 #include "lcmGcd.h"
 
-long lcm(long a, long b){
+long LcmGcd::gcd(long a, long b){
     while (a*b!=0){
         if (a>b){
             a%=b;
@@ -15,14 +15,31 @@ long lcm(long a, long b){
     return a+b;
 }
 
-long gcd(long a, long b){
-    return a*b/lcm(a,b);
+long LcmGcd::lcm(long a, long b){
+    return a*b/gcd(a,b);
 }
 
-long gcdArray(long a) {
-    long temp = 1;
-    for (long i = 2; i <= a; ++i) {
-        temp = gcd(temp,i);
+void LcmGcd::lcmGcd1() {
+    int nTest;
+    std::cin >> nTest;
+    for (int i = 0; i < nTest; ++i) {
+        long a,b;
+        std::cin >> a >> b;
+        std::cout << lcm(a,b) << gcd(a,b);
     }
-    return temp;
+}
+
+void LcmGcd::lcmGcd2() {
+    int nTest;
+    std::cin >> nTest;
+    for (int i = 0; i < nTest; ++i) {
+        long a;
+        std::cin >> a;
+        long temp = 1;
+        for (long j = 2; j <= a; ++j) {
+            temp = gcd(temp,j);
+        }
+        std::cout << temp << std::endl;
+    }
+
 }
