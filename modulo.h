@@ -8,4 +8,6 @@ public:
     void modulo2();
     void modulo3();
     void modulo4();
+
+    void combi1();
 };

@@ -5,12 +5,7 @@
 using namespace std;
 
 int main() {
-    Prime prime;
-//    prime.prime18();
-//    Modulo modulo;
-//    modulo.modulo3();
-
-    Fibonaci fibonaci;
-    fibonaci.fibonaci2();
+    Modulo modulo;
+    modulo.combi1();
     return 0;
 }

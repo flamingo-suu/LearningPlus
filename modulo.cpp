@@ -61,3 +61,41 @@ void Modulo::modulo4() {
         }
 }
 }
+int a[111];
+int n;
+bool ok=true;
+void in(){
+    for (int i = 1; i <=n ; ++i) {
+        cout << a[i] << " ";
+    }
+    cout << endl;
+}
+void sinh(){
+    int i=n;
+    while (a[i] == 1){
+        i--;
+    }
+    if (i==0){
+        ok = false;
+    }
+    else {
+        a[i] = 1;
+        for (int j = i+1; j <=n ; ++j) {
+            a[j] = 0;
+        }
+    }
+}
+void Modulo::combi1() {
+    n = 6;
+    a[1]= 0;
+    a[2]= 0;
+    a[3]= 0;
+    a[4]= 0;
+    a[5]= 0;
+    a[6]= 0;
+
+    while (ok){
+        in();
+        sinh();
+    }
+}
