@@ -4,6 +4,7 @@
 
 #include "modulo.h"
 #include "iostream"
+#include "algorithm"
 using namespace std;
 void Modulo::modulo1() {
     int nTest;
@@ -62,10 +63,10 @@ void Modulo::modulo4() {
 }
 }
 int a[111];
-int n;
+int n,x;
 bool ok=true;
 void in(){
-    for (int i = 1; i <=n ; ++i) {
+    for (int i = 0; i <n ; ++i) {
         cout << a[i] << " ";
     }
     cout << endl;
@@ -85,17 +86,24 @@ void sinh(){
         }
     }
 }
-void Modulo::combi1() {
-    n = 6;
-    a[1]= 0;
-    a[2]= 0;
-    a[3]= 0;
-    a[4]= 0;
-    a[5]= 0;
-    a[6]= 0;
 
-    while (ok){
-        in();
-        sinh();
-    }
+bool cmp(int a,int b){
+    return abs(x - a) < abs(x - b);
+}
+void Modulo::combi1() {
+    n = 5;
+    x = 7;
+    a[0]= 10;
+    a[1]= 5;
+    a[2]= 3;
+    a[3]= 9;
+    a[4]= 2;
+//    a[5]= 5;
+//    a[6]= 6;
+    sort(a,a+n,cmp);
+    in();
+//    while (ok){
+//        in();
+//        sinh();
+//    }
 }
